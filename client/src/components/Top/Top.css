@@ -1,0 +1,42 @@
+.top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-container li {
+    font-size: 14px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 5px;
+}
+
+.top-sosmed img {
+    width: 20px;
+    margin: 0 10px;
+}
+
+.top-right ul {
+    display: flex;
+    align-items: center;
+}
+
+.top-right li {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.top-right img {
+    width: 20px;
+    margin-right: 5px;
+}

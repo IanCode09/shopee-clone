@@ -19,3 +19,11 @@ body {
 li {
   list-style: none;
 }
+
+.mb-4 {
+  margin-bottom: 40px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
