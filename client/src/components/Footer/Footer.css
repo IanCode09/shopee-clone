@@ -1,0 +1,22 @@
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    height: 350px;
+    background-color: #272727;
+}
+
+footer h4 {
+    margin-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    line-height: 35px;
+}
+
+footer img {
+    width: 80px;
+}
