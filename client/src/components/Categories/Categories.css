@@ -1,0 +1,30 @@
+.categories-container {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.category-list:hover {
+    color:#EA501F
+}
+
+.category-list img {
+    width: 80px;
+    margin-bottom: 10px;
+}

@@ -27,3 +27,7 @@ li {
 .mt-4 {
   margin-top: 40px;
 }
+
+.text-light {
+  color: rgb(153, 153, 153);
+}
