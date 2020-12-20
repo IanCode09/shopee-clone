@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import ShopeeFeatures from '../components/ShopeeFeatures/ShopeeFeatures'
 import ShopeeCategories from '../components/Categories/ShopeeCategories'
+import ShopeeProducts from '../components/Products/ShopeeProducts'
 
 
 const HomeScreen = () => {
@@ -14,6 +15,7 @@ const HomeScreen = () => {
             <Hero />
             <ShopeeFeatures />
             <ShopeeCategories />
+            <ShopeeProducts />
         </div>
     )
 }
