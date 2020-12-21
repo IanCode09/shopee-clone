@@ -1,8 +1,19 @@
 .products-container {
     margin-top: 100px;
+}
+
+.products-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.products-container h1 {
+    margin-bottom: 40px;
+    background-color:  #EA501F;
+    border-radius: 35px 0 35px 0;
+    width: 20%;
+    padding: 10px 25px;
 }
 
 .product-info {

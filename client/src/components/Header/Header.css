@@ -8,15 +8,15 @@
 .search {
     display: flex;
     align-items: center;
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
 }
 
 .search-input {
-    height: 35px;
     width: 850px;
     outline: none;
-    border-radius: 5px;
-    margin-right: 5px;
-    padding: 16px 15px;
+    padding: 0 15px;
     font-size: 16px;
     border: none;
 }

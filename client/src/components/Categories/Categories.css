@@ -1,5 +1,5 @@
 .categories-container {
-    margin-top: 50px;
+    margin-top: 40px;
     width: 100%;
 }
 
@@ -17,7 +17,7 @@
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .category-list:hover {
@@ -26,5 +26,4 @@
 
 .category-list img {
     width: 80px;
-    margin-bottom: 10px;
 }

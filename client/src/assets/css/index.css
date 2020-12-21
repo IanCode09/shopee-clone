@@ -12,12 +12,24 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container{
   padding: 10px 80px;
 }
 
 li {
   list-style: none;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}
+
+.mt-3 {
+  margin-top: 30px;
 }
 
 .mb-4 {

@@ -6,11 +6,14 @@ import ShopeeProduct from './ShopeeProduct'
 const ShopeeProducts = () => {
     return (
         <div className="products-container">
-            {products.map(product => (
-                <div key={product._id} className="product-info">
-                    <ShopeeProduct product={product} />
-                </div>
-            ))}
+            <h1>Hot Products</h1>
+            <div className="products-list">
+                {products.map(product => (
+                    <div key={product._id} className="product-info">
+                        <ShopeeProduct product={product} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
