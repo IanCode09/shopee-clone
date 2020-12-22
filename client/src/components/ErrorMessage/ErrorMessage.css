@@ -1,0 +1,13 @@
+.alert {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 35%;
+}
+
+.info {
+    background-color: rgb(19, 161, 126);
+}
+
+.danger {
+    background-color: rgb(202, 32, 32);
+}
