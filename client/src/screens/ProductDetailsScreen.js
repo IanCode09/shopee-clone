@@ -6,6 +6,7 @@ import Footer from '../components/Footer/Footer'
 import { dataProductsDetails } from '../actions/productActions'
 import FreeShip from '../assets/images/icons/free.png'
 import Button from '../UI/Button/Button'
+import Star from '../UI/Star/Star'
 
 const ProductDetailsScreen = ({ match }) => {
     const dispatch = useDispatch()
@@ -31,7 +32,7 @@ const ProductDetailsScreen = ({ match }) => {
 
                         <div className="detail-right">
                             <h2>{product.nameProduct}</h2>
-                            <p>{product.rating}</p>
+                            <h3><Star rating={product.rating} /></h3> <span className="text-light">{product.reviews} Penilaian</span>
 
                             <div className="price-info">
                                 <h1>Rp.{product.price}</h1>

@@ -44,8 +44,8 @@ li {
   color: rgb(161, 161, 161);
 }
 
-.fas {
-  margin-right: 10px;
+.fas, .far {
+  margin-right: 5px;
 }
 
 .fa-shipping-fast {
