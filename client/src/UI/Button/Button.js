@@ -5,6 +5,8 @@ const Button = (props) => {
     const btnType = [props.btnType]
 
     if(props.isPrimary) btnType.push("btn btn-primary")
+    if(props.isSecondary) btnType.push("btn btn-secondary")
+    if(props.isSearch) btnType.push("btn btn-search")
 
     return (
         <button className={btnType.join("")} onClick={props.onClick}>

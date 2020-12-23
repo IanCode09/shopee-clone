@@ -11,7 +11,7 @@ const Header = () => {
             <Logo />
             <div className="search">
                 <input type="text" className="search-input" placeholder="Search..." />
-                <Button isPrimary>
+                <Button isSearch>
                     <img style={{ width: 20 }} src={BtnSearch} alt="search" />
                 </Button> 
             </div>

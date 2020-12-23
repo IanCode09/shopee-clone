@@ -41,5 +41,85 @@ li {
 }
 
 .text-light {
-  color: rgb(153, 153, 153);
+  color: rgb(161, 161, 161);
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+.fa-shipping-fast {
+  color: rgb(99, 177, 250);
+  font-size: 20px;
+}
+
+.fa-coins {
+  color: rgb(238, 203, 6);
+  font-size: 20px;
+}
+
+.product-detail {
+  margin-top: 50px;
+}
+
+.detail-top {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(41, 42, 58);
+  color: white;
+  padding: 35px 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.detail-top img {
+  width: 520px;
+  box-shadow: 4px 7px 16px -7px rgba(233, 233, 233, 0.75);
+  border-radius: 5px;
+}
+
+.detail-top .detail-right h2 {
+  margin-bottom: 20px;
+  font-size: 27px;
+}
+
+.detail-top .detail-right .price-info {
+  color: rgb(160, 255, 97);
+  margin: 25px 0;
+  line-height: 30px;
+}
+
+.detail-top .detail-right .price-info h1 {
+  color: #c8d458;
+  margin-bottom: 15px;
+}
+
+.shopee-info {
+  display: flex;
+  line-height: 40px;
+}
+
+.detail-top .detail-right .shopee-info .left-info {
+  margin-right: 50px;
+}
+
+.detail-right button {
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.detail-bottom {
+  margin-top: 100px;
+}
+
+.detail-bottom p {
+  line-height: 40px;
+}
+
+.spesifikasi-main {
+  display: flex;
+}
+
+.spesifikasi-left {
+  margin-right: 50px;
 }
