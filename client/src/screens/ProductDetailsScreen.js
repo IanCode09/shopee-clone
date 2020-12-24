@@ -4,6 +4,7 @@ import Top from '../components/Top/Top'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import { dataProductsDetails } from '../actions/productActions'
+import { addToCart } from '../actions/cartActions'
 import Spinner from '../UI/Spinner/Spinner'
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage'
 import Button from '../UI/Button/Button'
@@ -24,6 +25,10 @@ const ProductDetailsScreen = ({ history, match }) => {
 
     const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`)
+    }
+
+    const addToBasketHandler = () => {
+        dispatch(addToCart(match.params.id, qty))
     }
 
     return (
@@ -89,7 +94,11 @@ const ProductDetailsScreen = ({ history, match }) => {
                                             Masukkan Keranjang
                                         </Button>
                                     ) : (
-                                        <Button type="button" isSecondary>
+                                        <Button 
+                                            onClick={addToBasketHandler}
+                                            type="button" 
+                                            isSecondary
+                                        >
                                             Masukkan Keranjang
                                         </Button>
                                     )}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import Logo from '../Logo/Logo'
@@ -7,6 +8,9 @@ import BtnCart from '../../assets/images/icons/cart.png'
 import Button from '../../UI/Button/Button'
 
 const Header = () => {
+    const cart = useSelector((state) => state.cart)
+    const { cartItems } = cart
+
     return (
         <div className="header-container">
             <Logo />
@@ -18,7 +22,10 @@ const Header = () => {
             </div>
 
             <Link to="/cart">
-                <img style={{ width: 35 }} src={BtnCart} alt="Cart" />
+                <img style={{ width: 35 }} src={BtnCart} alt="Cart" /> 
+                {cartItems.length >= 1 && (
+                    <span className="text-light">{cartItems.length}</span>
+                )}
             </Link>
         </div>
     )

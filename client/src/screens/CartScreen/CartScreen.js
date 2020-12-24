@@ -79,7 +79,7 @@ const CartScreen = ({ match, location }) => {
 
                                     <Button 
                                         isPrimary
-                                        onClick={() => removeFromCartHandler(cartItem.product)}
+                                        onClick={() => removeFromCartHandler(cartItem.productId)}
                                     >
                                         Hapus
                                     </Button>
