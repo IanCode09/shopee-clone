@@ -30,7 +30,6 @@ const CartScreen = ({ match, location }) => {
         dispatch(removeFromCart(id))
     }
 
-
     return (
         <>
             <div className="container">
@@ -61,7 +60,17 @@ const CartScreen = ({ match, location }) => {
                                         </Link>
                                     </div>
                                     
-                                    <Currency value={cartItem.price} />
+                                    {cartItem.isDiskon ? (
+                                        <div>
+                                            <Currency value={cartItem.price * (50 / 100)} />
+
+                                            <del className="text-light">
+                                                <Currency value={cartItem.price}/>
+                                            </del>
+                                        </div>
+                                    ) : (
+                                        <Currency value={cartItem.price} />
+                                    )}
                                 
                                     <select value={cartItem.qty} onChange={(e) => dispatch(
                                         addToCart(cartItem.productId, Number(e.target.value))
@@ -73,9 +82,13 @@ const CartScreen = ({ match, location }) => {
                                         ))}
                                     </select>
                                     
-                                    <h3>
+                                    {cartItem.isDiskon ? (
+                                        <h3>
+                                            <Currency value={cartItem.qty * (cartItem.price * (50 / 100))} />
+                                        </h3>
+                                    ) : (
                                         <Currency value={cartItem.qty * cartItem.price} />
-                                    </h3>
+                                    )}
 
                                     <Button 
                                         isPrimary

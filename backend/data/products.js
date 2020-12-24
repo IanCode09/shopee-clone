@@ -74,7 +74,8 @@ const products = [
         stock: 9,
         address: 'KOTA JAKARTA BARAT - TAMAN SARI, DKI JAKARTA, ID',
         rating: 4,
-        reviews: 0
+        reviews: 0,
+        isDiskon: true
     },
 
     {
@@ -87,7 +88,8 @@ const products = [
         stock: 6,
         address: 'KOTA JAKARTA PUSAT - MENTENG, DKI JAKARTA, ID',
         rating: 5,
-        reviews: 0
+        reviews: 0,
+        isDiskon: true
     },
 
     {
@@ -113,7 +115,8 @@ const products = [
         stock: 15,
         address: 'KOTA JAKARTA UTARA - PENJARINGAN, DKI JAKARTA, ID',
         rating: 3.5,
-        reviews: 0
+        reviews: 0,
+        isDiskon: true
     },
 
     {
@@ -191,7 +194,8 @@ const products = [
         stock: 25,
         address: 'KOTA JAKARTA BARAT - TAMAN SARI, DKI JAKARTA, ID',
         rating: 4.5,
-        reviews: 0
+        reviews: 0,
+        isDiskon: true
     },
 ]
 

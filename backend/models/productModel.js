@@ -76,6 +76,11 @@ const productSchema = mongoose.Schema(
             type: Number,
             required: true,
             default: 0
+        },
+
+        isDiskon: {
+            type: Boolean,
+            default: false
         }
     },
 

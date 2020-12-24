@@ -98,6 +98,19 @@ li {
   margin-bottom: 15px;
 }
 
+.detail-top .detail-right .price-info .price-discount {
+  display: flex;
+  align-items: flex-start;
+}
+
+.price-discount h4 {
+  color: white;
+  background-color: #b60909;
+  padding: 0 10px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+
 .shopee-info {
   display: flex;
   line-height: 40px;
