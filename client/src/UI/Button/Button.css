@@ -18,7 +18,7 @@
 
 .btn-primary {
     background-color: #b60909;
-    padding: 15px 25px;
+    padding: 11px 25px;
 }
 
 .btn-primary:hover {
@@ -27,9 +27,15 @@
 
 .btn-secondary {
     background-color: rgb(11, 148, 52);
-    padding: 15px 25px;
+    padding: 11px 25px;
 }
 
 .btn-secondary:hover {
     background-color: rgb(16, 160, 59);
+}
+
+.btn-disabled {
+    background-color: rgb(78, 78, 78);
+    padding: 15px 25px; 
+    cursor: default;
 }

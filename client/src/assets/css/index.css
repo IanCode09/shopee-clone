@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 a {
   text-decoration: none;
 }
@@ -67,7 +71,7 @@ li {
   flex-wrap: wrap;
   background-color: rgb(41, 42, 58);
   color: white;
-  padding: 35px 0;
+  padding: 25px 0;
   align-items: center;
   justify-content: space-around;
 }
@@ -122,4 +126,12 @@ li {
 
 .spesifikasi-left {
   margin-right: 50px;
+}
+
+select {
+  outline: none;
+  height: 30px;
+  width: 50px;
+  padding: 5px;
+  font-size: 15px;
 }

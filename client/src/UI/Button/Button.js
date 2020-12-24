@@ -6,10 +6,11 @@ const Button = (props) => {
 
     if(props.isPrimary) btnType.push("btn btn-primary")
     if(props.isSecondary) btnType.push("btn btn-secondary")
+    if(props.isDisabled) btnType.push("btn btn-disabled")
     if(props.isSearch) btnType.push("btn btn-search")
 
     return (
-        <button className={btnType.join("")} onClick={props.onClick}>
+        <button className={btnType.join("")} disabled={props.disabled} onClick={props.onClick}>
             {props.children}
         </button>
 

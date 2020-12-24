@@ -5,6 +5,16 @@
     align-items: center;
 }
 
+.cart-header-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    width: 35%;
+}
+
 .search {
     display: flex;
     align-items: center;

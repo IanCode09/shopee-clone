@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 import Logo from '../Logo/Logo'
 import BtnSearch from '../../assets/images/icons/btnsearch.png'
@@ -16,7 +17,9 @@ const Header = () => {
                 </Button> 
             </div>
 
-            <img style={{ width: 35 }} src={BtnCart} alt="Cart" />
+            <Link to="/cart">
+                <img style={{ width: 35 }} src={BtnCart} alt="Cart" />
+            </Link>
         </div>
     )
 }
