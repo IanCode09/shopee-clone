@@ -32,8 +32,6 @@ const ProductDetailsScreen = ({ history, match }) => {
         dispatch(addToCart(match.params.id, qty))
     }
 
-    const discountPrice = product.price * (50 / 100)
-
     return (
         <>
             <div className="container">
@@ -57,23 +55,9 @@ const ProductDetailsScreen = ({ history, match }) => {
                                     <h3><Star rating={product.rating} /></h3> <span className="text-light">{product.reviews} Penilaian</span>
 
                                     <div className="price-info">
-                                        {product.isDiskon  ? (
-                                            <>
-                                                <del className="text-light">
-                                                    <Currency value={product.price} />
-                                                </del>                                                 
-                                                <div className="price-discount">
-                                                    <h1>
-                                                        <Currency value={ discountPrice } />
-                                                    </h1>
-                                                    <h4>50% OFF</h4>
-                                                </div>
-                                            </>
-                                        ) : (
-                                            <h1>
-                                                <Currency value={product.price} />
-                                            </h1>
-                                        )}
+                                        <h1>
+                                            <Currency value={product.price} />
+                                        </h1>
                                         <p>Shopee Garansi 100% ori</p>
                                         <p className="text-light">Garansi uang kembali jika produk tidak ori</p>
                                     </div>

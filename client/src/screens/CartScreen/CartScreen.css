@@ -38,3 +38,27 @@
 .cart-empty img {
     width: 300px;
 }
+
+.cart-page-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.cart-page-footer-summary {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 20px;
+}
+
+.cart-page-footer-first-summary {
+    display: flex;
+    align-items: center;
+}
+
+.cart-page-footer-first-summary h1 {
+    color: #c8d458;
+    margin-left: 10px;
+}

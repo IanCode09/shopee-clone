@@ -30,6 +30,9 @@ const CartScreen = ({ match, location }) => {
         dispatch(removeFromCart(id))
     }
 
+    const subTotalProduct = cartItems.reduce((accumulator, item) => accumulator + item.qty, 0)
+    const amount = cartItems.reduce((accumulator, item) => accumulator + item.qty * item.price, 0)
+
     return (
         <>
             <div className="container">
@@ -39,7 +42,7 @@ const CartScreen = ({ match, location }) => {
                 <div className="cart-page mt-4">
                     {cartItems.length === 0 ? (
                         <div className="cart-empty">
-                            <img src={cartEmpty} />
+                            <img src={cartEmpty} alt="empty-cart" />
                             <Link to="/">
                                 <Button isPrimary>
                                     Belanja Sekarang
@@ -48,58 +51,63 @@ const CartScreen = ({ match, location }) => {
                         </div>
                     ) : (
                         <div className="cart-item">
-                            {cartItems.map((cartItem) => (
-                                <div key={cartItem.productId} className="cart-item-list">
-                                    <div className="cart-item-overview">
-                                        <Link to={`/shopee/${cartItem.product}`}>
-                                            <img src={cartItem.image} alt={cartItem.nameProduct} />
-                                        </Link>
+                            <>
+                                {cartItems.map((cartItem) => (
+                                    <div key={cartItem.productId} className="cart-item-list">
+                                        <div className="cart-item-overview">
+                                            <Link to={`/shopee/${cartItem.productId}`}>
+                                                <img src={cartItem.image} alt={cartItem.nameProduct} />
+                                            </Link>
 
-                                        <Link to={`/shopee/${cartItem.product}`}>
-                                            <p>{cartItem.nameProduct}</p>
-                                        </Link>
-                                    </div>
-                                    
-                                    {cartItem.isDiskon ? (
-                                        <div>
-                                            <Currency value={cartItem.price * (50 / 100)} />
-
-                                            <del className="text-light">
-                                                <Currency value={cartItem.price}/>
-                                            </del>
+                                            <Link to={`/shopee/${cartItem.productId}`}>
+                                                <p>{cartItem.nameProduct}</p>
+                                            </Link>
                                         </div>
-                                    ) : (
+                                        
                                         <Currency value={cartItem.price} />
-                                    )}
-                                
-                                    <select value={cartItem.qty} onChange={(e) => dispatch(
-                                        addToCart(cartItem.productId, Number(e.target.value))
-                                    )}>
-                                        {[...Array(cartItem.stock).keys()].map((q) => (
-                                            <option key={q + 1} value={q + 1}>
-                                                {q + 1}
-                                            </option>
-                                        ))}
-                                    </select>
                                     
-                                    {cartItem.isDiskon ? (
-                                        <h3>
-                                            <Currency value={cartItem.qty * (cartItem.price * (50 / 100))} />
-                                        </h3>
-                                    ) : (
+                                        <select value={cartItem.qty} onChange={(e) => dispatch(
+                                            addToCart(cartItem.productId, Number(e.target.value))
+                                        )}>
+                                            {[...Array(cartItem.stock).keys()].map((q) => (
+                                                <option key={q + 1} value={q + 1}>
+                                                    {q + 1}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        
                                         <Currency value={cartItem.qty * cartItem.price} />
-                                    )}
+                                       
+                                        <Button 
+                                            isSecondary
+                                            onClick={() => removeFromCartHandler(cartItem.productId)}
+                                        >
+                                            Hapus
+                                        </Button>
+                                    </div>
+                                ))}
+                            </>
+                            <div className="cart-page-footer">
+                                    <div className="cart-page-footer-summary">
+                                        <div className="cart-page-footer-first-summary">
+                                            <p>Subtotal untuk Produk ({subTotalProduct} Produk):</p>
+                                            <h1>
+                                                <Currency value={amount} />
+                                            </h1>
+                                        </div>
 
-                                    <Button 
-                                        isPrimary
-                                        onClick={() => removeFromCartHandler(cartItem.productId)}
-                                    >
-                                        Hapus
-                                    </Button>
-                                </div>
-                            ))}
+                                        <div className="cart-page-footer-second-summary">
+                                            <small className="text-light">Total Koin Shopee akan didapatkan: 10.500 Koin</small>
+                                        </div>
+                                    </div>
+
+                                    <div className="cart-page-footer-checkout">
+                                        <Button isPrimary>CHECKOUT</Button>
+                                    </div>
+                            </div>
                         </div>
                     )}
+
                 </div>
             </div>
             <Footer />
