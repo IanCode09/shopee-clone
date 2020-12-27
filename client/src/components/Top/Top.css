@@ -40,3 +40,12 @@
     width: 20px;
     margin-right: 5px;
 }
+
+.top-right a {
+    color: white;
+}
+
+.top-right span {
+    cursor: pointer;
+    margin-left: 5px;
+}
