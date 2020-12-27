@@ -1,7 +1,7 @@
 .alert {
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
-    width: 35%;
+    width: 100%;
 }
 
 .info {
@@ -9,5 +9,8 @@
 }
 
 .danger {
-    background-color: rgb(202, 32, 32);
+    background-color: rgba(226, 194, 255, 0.815);
+    color: black;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
