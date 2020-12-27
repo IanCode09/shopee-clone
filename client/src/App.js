@@ -4,6 +4,7 @@ import CartScreen from './screens/CartScreen/CartScreen'
 import HomeScreen from './screens/HomeScreen'
 import LoginScreen from './screens/LoginScreen/LoginScreen'
 import ProductDetailsScreen from './screens/ProductDetailsScreen'
+import RegisterScreen from './screens/RegisterScreen/RegisterScreen'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/shopee/:id' component={ProductDetailsScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/login' component={LoginScreen} />
+          <Route path='/register' component={RegisterScreen} />
       </Router>
     </div>
   );
