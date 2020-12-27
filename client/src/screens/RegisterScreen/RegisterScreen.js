@@ -8,7 +8,7 @@ import { register } from '../../actions/userActions'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import Spinner from '../../UI/Spinner/Spinner'
 
-const RegisterScreen = ({ location, history }) => {
+const RegisterScreen = ({ history }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -17,11 +17,13 @@ const RegisterScreen = ({ location, history }) => {
 
     const dispatch = useDispatch()
 
+    const userLogin = useSelector((state) => state.userLogin)
+
     const userRegister = useSelector((state) => state.userRegister)
     const { loading, userInfo, error } = userRegister
 
     useEffect(() => {
-        if(userInfo) {
+        if(userInfo || userLogin.userInfo) {
             history.push('/')
         }
     }, [history, userInfo])

@@ -55,7 +55,7 @@ export const register = (name, email, password) => async (dispatch) => {
 
         const config = {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         }
 
@@ -64,6 +64,11 @@ export const register = (name, email, password) => async (dispatch) => {
             { name, email, password },
             config
         )
+
+        dispatch({
+            type: USER_REGISTER_SUCCESS,
+            payload: data
+        })
 
         dispatch({
             type: USER_LOGIN_SUCCESS,

@@ -8,7 +8,7 @@ import { login } from '../../actions/userActions'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import Spinner from '../../UI/Spinner/Spinner'
 
-const LoginScreen = ({ location, history }) => {
+const LoginScreen = ({ history }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
