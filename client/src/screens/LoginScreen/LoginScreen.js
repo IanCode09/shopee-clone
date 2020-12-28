@@ -8,7 +8,7 @@ import { login } from '../../actions/userActions'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import Spinner from '../../UI/Spinner/Spinner'
 
-const LoginScreen = ({ history }) => {
+const LoginScreen = ({ history, location }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -17,11 +17,13 @@ const LoginScreen = ({ history }) => {
     const userLogin = useSelector((state) => state.userLogin)
     const { loading, userInfo, error } = userLogin
 
+    const redirect = location.search ? location.search.split('=')[1] : '/'
+
     useEffect(() => {
         if(userInfo) {
-            history.push('/')
+            history.push(redirect)
         }
-    }, [history, userInfo])
+    }, [history, userInfo, redirect])
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -55,7 +57,7 @@ const LoginScreen = ({ history }) => {
                             onChange={(e) => setPassword(e.target.value)}
                         />
 
-                        <Button isPrimary>LOG IN</Button>
+                        <Button isSubmit isPrimary>LOG IN</Button>
                         <p className="text-light mt-3">ATAU</p>
 
                         <div className="login-page-social-media">
@@ -74,7 +76,7 @@ const LoginScreen = ({ history }) => {
 
                         <p className="text-light">
                             Baru di Shopee? {' '}
-                            <Link to="/register">
+                            <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                                 Register
                             </Link>
                         </p>

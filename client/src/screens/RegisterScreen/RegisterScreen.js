@@ -8,7 +8,7 @@ import { register } from '../../actions/userActions'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import Spinner from '../../UI/Spinner/Spinner'
 
-const RegisterScreen = ({ history }) => {
+const RegisterScreen = ({ history, location }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -22,11 +22,13 @@ const RegisterScreen = ({ history }) => {
     const userRegister = useSelector((state) => state.userRegister)
     const { loading, userInfo, error } = userRegister
 
+    const redirect = location.search ? location.search.split('=')[1] : '/'
+
     useEffect(() => {
         if(userInfo || userLogin.userInfo) {
-            history.push('/')
+            history.push(redirect)
         }
-    }, [history, userInfo])
+    }, [history, userInfo, redirect])
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -99,7 +101,7 @@ const RegisterScreen = ({ history }) => {
 
                         <p className="text-light">
                             Punya akun? {' '}
-                            <Link to="/login">
+                            <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
                                 Log in
                             </Link>
                         </p>

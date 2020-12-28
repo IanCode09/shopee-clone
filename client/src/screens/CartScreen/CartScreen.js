@@ -10,7 +10,7 @@ import Currency from '../../components/Currency'
 import Button from '../../UI/Button/Button'
 import cartEmpty from '../../assets/images/cartempty.gif'
 
-const CartScreen = ({ match, location }) => {
+const CartScreen = ({ match, location, history }) => {
     const productId = match.params.id
 
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
@@ -20,6 +20,9 @@ const CartScreen = ({ match, location }) => {
     const cart = useSelector((state) => state.cart)
     const { cartItems } = cart
 
+    const userLogin = useSelector((state) => state.userLogin)
+    const { userInfo } = userLogin
+
     useEffect(() => {
         if(productId) {
             dispatch(addToCart(productId, qty))
@@ -28,6 +31,10 @@ const CartScreen = ({ match, location }) => {
 
     const removeFromCartHandler = (id) => {
         dispatch(removeFromCart(id))
+    }
+
+    const checkoutHandler = () => {
+        history.push('/login?redirect=checkout/address')
     }
 
     const subTotalProduct = cartItems.reduce((accumulator, item) => accumulator + item.qty, 0)
@@ -102,7 +109,13 @@ const CartScreen = ({ match, location }) => {
                                     </div>
 
                                     <div className="cart-page-footer-checkout">
-                                        <Button isPrimary>CHECKOUT</Button>
+                                        <Button 
+                                            isButton
+                                            isPrimary
+                                            onClick={checkoutHandler}
+                                        >
+                                            CHECKOUT
+                                        </Button>
                                     </div>
                             </div>
                         </div>

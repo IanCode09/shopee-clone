@@ -14,9 +14,10 @@ function App() {
           <Route path="/" component={HomeScreen} exact />
           <Route path='/shopee/:id' component={ProductDetailsScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
+          <Route path='/checkout/address' component={CheckoutAddressScreen} />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
-          <Route path='/checkout/address' component={CheckoutAddressScreen} />
+          
       </Router>
     </div>
   );
