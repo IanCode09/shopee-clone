@@ -1,0 +1,27 @@
+.address-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-page input {
+    height: 45px;
+    padding: 0 20px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.address-page button {
+    margin-top: 15px;
+}
+
+.address-page-detail {
+    width: 45%;
+}
