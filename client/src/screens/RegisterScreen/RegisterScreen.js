@@ -28,7 +28,7 @@ const RegisterScreen = ({ history, location }) => {
         if(userInfo || userLogin.userInfo) {
             history.push(redirect)
         }
-    }, [history, userInfo, redirect])
+    }, [history, userInfo, redirect, userLogin])
 
     const submitHandler = (e) => {
         e.preventDefault()
