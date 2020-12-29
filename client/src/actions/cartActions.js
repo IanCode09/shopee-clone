@@ -33,7 +33,7 @@ export const removeFromCart = (id) => (dispatch, getState) => {
     localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }
 
-export const addShippingAddress = (dataAddress) => (dispatch) => {
+export const addShippingAddress = (dataAddress) => async (dispatch) => {
     dispatch({
         type: CART_ADD_ADDRESS,
         payload: dataAddress

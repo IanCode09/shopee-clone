@@ -17,8 +17,6 @@ const CheckoutAddressScreen = ({ history }) => {
     const [country, setCountry] = useState(shippingAddress.country)
     const [telephone, setTelephone] = useState(shippingAddress.telephone)
 
-    
-
     const dispatch = useDispatch()
 
     const submitHandler = (e) => {
@@ -42,7 +40,7 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter Province" 
                                 name="province" 
-                                value={province}
+                                required
                                 onChange={(e) => setProvince(e.target.value)}
                             />
 
@@ -50,7 +48,7 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter City" 
                                 name="city" 
-                                value={city}
+                                required
                                 onChange={(e) => setCity(e.target.value)}
                             />
 
@@ -58,7 +56,7 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter Address" 
                                 name="address" 
-                                value={address}
+                                required
                                 onChange={(e) => setAddress(e.target.value)}
                             />
 
@@ -66,7 +64,7 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter Postal Code" 
                                 name="postalCode" 
-                                value={postalCode}
+                                required
                                 onChange={(e) => setPostalCode(e.target.value)}
                             />
 
@@ -74,7 +72,7 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter Country" 
                                 name="country" 
-                                value={country}
+                                required
                                 onChange={(e) => setCountry(e.target.value)}
                             />
 
@@ -82,11 +80,11 @@ const CheckoutAddressScreen = ({ history }) => {
                                 type="text" 
                                 placeholder="Enter Telephone Number" 
                                 name="telephone" 
-                                value={telephone}
+                                required
                                 onChange={(e) => setTelephone(e.target.value)}
                             />
 
-                            <Button isPrimary>
+                            <Button isPrimary isSubmit>
                                 SUBMIT
                             </Button>
                         </form>

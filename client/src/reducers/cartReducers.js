@@ -34,7 +34,7 @@ export const cartReducer = (state = { cartItems: [], shippingAddres: {} }, actio
         case CART_ADD_ADDRESS:
             return {
                 ...state,
-                shippingAddres: action.payload
+                shippingAddress: action.payload
             }
 
         default:

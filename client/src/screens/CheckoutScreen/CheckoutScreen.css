@@ -1,0 +1,140 @@
+.page-checkout {
+    border-top: 1px solid rgb(101, 243, 253);
+    border-bottom: 1px solid rgb(101, 243, 253);
+    padding: 30px 0;
+}
+
+.checkout-address,
+.checkout-product-list,
+.checkout-payment-method {
+    background-color: rgb(41, 42, 58);
+    padding: 25px 60px;
+    border-radius: 5px;
+}
+
+.checkout-address i {
+    color: #EA501F;
+}
+
+.checkout-address_summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-address_summary a {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(18, 92, 170);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.checkout-address_address-detail {
+    width: 60%;
+}
+
+.checkout-product-list_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkout-product-list_item-detail {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    
+}
+
+.checkout-product-list_item-detail img {
+    width: 80px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.checkout-product-list_shipping {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgb(251, 149, 255);
+    border-bottom: 1px solid rgb(251, 149, 255);
+}
+
+.checkout-product-list_shipping  small {
+    color: rgb(160, 255, 97);
+}
+
+.checkout-product-list_shipping-left {
+    margin-right: 40px;
+}
+
+.checkout-product-list_total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.checkout-product-list_total h2 {
+    margin-left: 20px;
+    color: #c8d458;
+}
+
+/* .checkout-payment-method {
+    display: flex;
+} */
+
+.checkout-payment-method_top {
+    display: flex;
+}
+
+.checkout-payment-method_left {
+    margin-right: 40px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.checkout-payment-method img {
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.checkout-bank-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkout-bank-item input {
+    margin-right: 20px;
+}
+
+.checkout-payment-method_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.payment-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-summary h2 {
+    color: #c8d458;
+}
+
+.payment-summary-info {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+}
+
+.payment-summary-left {
+    margin-right: 150px;
+}
